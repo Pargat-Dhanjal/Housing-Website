@@ -2,6 +2,8 @@ body
 {
     margin:0;
     padding:0;
+    /* overflow: hidden; */
+    /* background-color: #ffc947; */
 }
 
 /* navbar */
@@ -118,7 +120,6 @@ nav
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px;
     color: #185ADB;
-
 }
 
 .searchBar
@@ -193,6 +194,7 @@ nav
     background-color: #113A8A;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .offerTitle
@@ -209,7 +211,7 @@ nav
     font-weight: 700;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 3px;
-    color: #FFC947;
+    color: #ffc947;
 
 }
 
@@ -230,12 +232,33 @@ nav
     width: 60%;
 }
 
+hr
+{
+    border: 1px solid rgba(255, 201, 71, 0.7);
+    border-radius: 1px;
+}
+
 .offerCards
 {
     position: relative;
     top: 20vh;
     width: 100%;
     height: 45vh;
+}
+
+.offerAll
+{
+    position: relative;
+    top: -45vh;
+    left: 75%;
+    height: 8vh;
+    width: 25vh;
+    border-radius: 5vh;
+    background-color: #FFC947;
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color: #0A1931;
 }
 
 
@@ -271,6 +294,21 @@ nav
     height: 100%;
     object-fit: cover;
   }
+
+/* About Us */
+
+.aboutUs
+{
+    height: 100vh;
+    width: 100%;
+    background-color: #FFC947;
+}
+
+.aboutImage
+{
+    position: relative;
+    top:20vh;
+}
 /* Miscellenous */
 
 ul
