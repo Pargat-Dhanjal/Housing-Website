@@ -1,26 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
 
-gsap.to(".heroTitle", {
-    duration: 3,
-    scrollTrigger: {
-        trigger: ".heroCaption" ,
-        toggleActions: "restart none restart none",
-    }, 
-    ease: CustomEase.create("custom", "M0,0 C0,0 0.174,0.722 0.424,0.972 0.674,1.222 1,0 1,0 "),
-    y: -25
-});
-
-gsap.to(".heroCaption", {
-    duration: 3,
-    scrollTrigger: {
-        trigger: ".heroCaption" ,
-        toggleActions: "restart none restart none",
-    }, 
-    ease: CustomEase.create("custom", "M0,0 C0,0 0.174,0.722 0.424,0.972 0.674,1.222 1,0 1,0 "),
-    y: -15
-});
-
 gsap.to(".offerTitle", {
     duration: 3,
     scrollTrigger: {
@@ -92,3 +72,4 @@ gsap.to(sections, {
     }
   }
 });
+

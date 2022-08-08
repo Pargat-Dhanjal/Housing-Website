@@ -344,6 +344,7 @@ hr
     background-color: #113A8A;
     display: flex;
     overflow: hidden;
+    flex-direction: column;
 }
 
 .TeamTitle
@@ -357,6 +358,14 @@ hr
     font-size: 12vh;
     color: #FFC947;
 
+}
+
+.TeamCards
+{
+    position: relative;
+    top:16vh;
+    height:55vh;
+    width:100%;
 }
 
 /* References */

@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/zub3tbp.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>Real Estate Website</title>
 </head>
 <body>
@@ -37,14 +39,14 @@
     </nav>
 
         <div class="heroImage">
-         <img id="heroHouse" src="heroHouse.png" alt="">
+         <img data-aos="zoom-in" id="heroHouse" src="heroHouse.png" alt="">
         </div>
 
-        <div class="heroTitle">
+        <div class="heroTitle" data-aos="fade-down" data-aos-duration="1000">
             MODERN LIVING <br> FOR EVERYONE
         </div>
 
-        <div class="heroCaption">
+        <div class="heroCaption" data-aos="fade-down" data-aos-duration="1000">
             We provide a complete service for the sale and rental of real estate. 
         </div>
 
@@ -76,7 +78,7 @@
 
         <div class="offerTitle">
 
-            <div class="offerHeader">
+            <div data-aos="fade-up" class="offerHeader">
                 Top Offers
             </div>
 
@@ -119,39 +121,52 @@
 
     <div class="aboutUs">
         <div class="aboutImage">
-            <img height="60%" src="aboutUs.png" alt="">
+            <img  data-aos="zoom-in" height="60%" src="aboutUs.png"  alt="">
         </div>
         <div class="aboutUsText">
-            <div class="aboutUsTitle">
+            <div data-aos="zoom-in" class="aboutUsTitle">
                 About Us
             </div>
-            <div class="aboutUsCaption">
+            <div data-aos="fade-up" class="aboutUsCaption">
                 We are a company that connects the world of real estate and finance. We provide a complete service for the sale, purchase or rental of real estate. Our advantage is more than 15 years of experience and soil in attractive locations in Slovakia with branches in Bratislava and Košice.
             </div>
-            <div class="aboutUsCaption">
+            <div data-aos="fade-up" data-aos-anchor=".aboutUsCaption" class="aboutUsCaption">
                 We are a company that connects the world of real estate and finance. We provide a complete service for the sale, purchase or rental of real estate. 
             </div>
         </div>
     </div>
 
     <div class="Team">
-        <div class="TeamTitle">
+        <div data-aos="flip-left" data-aos-duration="1000" class="TeamTitle">
             Our Team
         </div>
+
+        <div class="TeamCards">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div data-aos="flip-left" data-aos-duration="1000" class="swiper-slide">Slide 1</div>
+                  <div data-aos="flip-left" data-aos-duration="1000" class="swiper-slide">Slide 2</div>
+                  <div data-aos="flip-left" data-aos-duration="1000" class="swiper-slide">Slide 3</div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+        </div>
+
+        
        
     </div>
 
-    <div class="references">
-        <div class="referencesTitle">
+    <div  class="references">
+        <div data-aos="fade-up" class="referencesTitle">
             References
         </div>
 
-        <div class="referencesCaption">
+        <div data-aos="fade-up" class="referencesCaption">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rutrum donec ultricies cras id ac.
         </div>
 
         <div class="referencesCards">
-            <div class="swiper mySwiper">
+            <div data-aos="flip-up" class="swiper mySwiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">Slide 1</div>
                   <div class="swiper-slide">Slide 2</div>
@@ -183,11 +198,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/PixiPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CustomEase.min.js"></script>
-    <script src="script.js"></script>
-
-
-    
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script> AOS.init(); </script> <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script>
