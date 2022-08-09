@@ -33,6 +33,7 @@ nav
 {
     height: 6vh;
     width: 6vh;
+    cursor: pointer;
 }
 
 .navbarList
