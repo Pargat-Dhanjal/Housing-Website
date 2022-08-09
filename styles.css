@@ -5,7 +5,7 @@ body
     /* overflow: hidden; */
     /* background-color: #ffc947; */
 }
-
+/* ---------------------------------landing page-------------------------------- */
 /* navbar */
 nav
 {
@@ -260,39 +260,29 @@ hr
     color: #0A1931;
 }
 
-
-.swiper {
-    width: 90%;
-    height: 100%;
-  }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    border-radius: 5%;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
+.hell
+{
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-
-  .swiper-slide img {
-    display: block;
+    width: 300%;
+}
+section
+{
+    position: relative;
+    left: 0.5%;
+    display: flex;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+    height: 50vh;
+    gap: 3%;
+    background-color: #113A8A;
+}
+.card
+{
+    position: relative;
+    height: 50vh;
+    width: 30%;
+    background-color: white;
+    border-radius: 25px;
+}
 
 /* About Us */
 
@@ -418,6 +408,44 @@ hr
     background-color: #113A8A;
 }
 
+
+/* swiper cards */
+
+.swiper
+{
+    width: 90%;
+    height: 100%;
+}
+
+.swiper-slide 
+{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    border-radius: 5%;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img 
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Miscellenous */
 
 ul
@@ -469,29 +497,5 @@ input[type="text"]
 .show 
 {
     display: block;
-}
-.hell
-{
-    display: flex;
-    width: 300%;
-    /* height: 300vh; */
-}
-section
-{
-    position: relative;
-    left: 0.5%;
-    display: flex;
-    width: 100%;
-    height: 50vh;
-    gap: 3%;
-    background-color: #113A8A;
-}
-.card
-{
-    position: relative;
-    height: 50vh;
-    width: 30%;
-    background-color: white;
-    border-radius: 25px;
 }
 
