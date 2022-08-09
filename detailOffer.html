@@ -84,7 +84,30 @@
         <div class="contactUs">
 
             <div class="contactUsForm">
-
+                <form action="" class="contactForm">
+                    <h1 class="form__heading">Contact Us</h1>
+                    <div class="form__group">
+                        <label for="name" class="form__label">Full Name:</label><br>
+                        <input type="text" class="form__input" id="name" placeholder=" " autocomplete="off">
+                    </div>
+                    <div class="form__group">
+                        <label for="phone" class="form__label">Phone Number:</label><br>
+                        <input type="text" class="form__input" id="phone" placeholder=" " autocomplete="off">
+                    </div>
+                    <div class="form__group">
+                        <label for="email" class="form__label">Email:</label><br>
+                        <input type="email" class="form__input" id="email" placeholder=" " autocomplete="off">
+                    </div>
+                    <div class="form__group" style="display: block;">
+                        <label for="message" class="form__label">Your Message:</label><br>
+                        <textarea type="text" name="message" rows="11" cols="50" wrap="soft" class="form__message" id="message" placeholder=" " autocomplete="off"></textarea>
+                    </div>
+                    <input type="checkbox" class="form__input form__checkbox" id="data_processing" required>
+                    <label for="data_processing" class="form__label form__checkbox__text">I agree to the processing of my personal data.</label>
+                    <div class="form__submit">
+                        Send Message
+                    </div>
+                </form>
             </div>
 
             <div class="sellerProfile">
