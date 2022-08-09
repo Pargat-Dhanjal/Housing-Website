@@ -1,3 +1,4 @@
+
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -56,20 +57,22 @@ gsap.to(".line2",{
 
 let sections = gsap.utils.toArray(".panel");
 
-gsap.to(sections, {
-  xPercent: -100 * (sections.length - 1),
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".topOffers",
-    pin: true,
-    scrub: 1,
-    snap: 1 / (sections.length - 1),
-    end: () => "+=" + document.querySelector(".hell").offsetWidth,
 
-    onLeave: function(self){
-        self.disable()
-        self.animation.progress(1)
+gsap.to(sections, {
+    xPercent: -100 * (sections.length - 1),
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".topOffers",
+        pin: true,
+        scrub: 1,
+        snap: 1 / (sections.length - 1),
+        end: () => "+=" + document.querySelector(".hell").offsetWidth,
+
+        onLeave: function(self){
+            self.disable()
+            self.animation.progress(1)
+        }
     }
-  }
 });
+
 
