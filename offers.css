@@ -45,6 +45,10 @@ nav
     color: #113A8A;
 }
 
+.navbarList li {
+    cursor: pointer;
+}
+
 .navLogin
 {
     position: absolute;
