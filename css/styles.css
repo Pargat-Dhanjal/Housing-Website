@@ -221,10 +221,11 @@ ul {
 
 .searchBox {
     background-color: var(--accent);
-    width: 90vw;
+    width: 95vw;
     height: 5rem;
-    margin: 2rem auto 5rem;
     border-radius: 2rem;
+    bottom: 1rem;
+    margin: 2rem auto;
 }
 
 #drop-menu {
@@ -234,7 +235,7 @@ ul {
     border: none;
     height: 2.5rem;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border-radius: 0.8rem;
     color: var(--accent);
     background-color: var(--white);
@@ -243,20 +244,22 @@ ul {
 
 .offersSearch {
     display: inline;
-    position: relative;
-    margin-left: 1rem;
+    position: absolute;
+    right: 0;
+    margin:1.2rem 1.6rem 0 0;
 }
 
 ::placeholder {
     color: var(--accent);
-  }
+}
+
 .search-bar {
     border: none;
     height: 2.5rem;
     width: 40vw;
     border-radius: 1rem 0 0 1rem;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--accent);
     background-color: var(--white);
 }
@@ -266,11 +269,10 @@ ul {
     height: 2.5rem;
     width: 10vw;
     border-radius: 0 1rem 1rem 0;
-    text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--accent);
     background-color: var(--bg);
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .search-icon {
