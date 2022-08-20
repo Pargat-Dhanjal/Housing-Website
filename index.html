@@ -20,6 +20,11 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Animation on scroll -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="src/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
 </head>
 
@@ -32,21 +37,21 @@
             <span></span>
             <span></span>
             <ul id="menu">
-                <li><a class="navlist" href="#">Top Offers</a></li>
-                <li><a class="navlist" href="#">Search in Offers</a></li>
+                <li><a class="navlist" href="#top-offers">Top Offers</a></li>
                 <li><a class="navlist" href="#">About Us</a></li>
+                <li><a class="navlist" href="#">Our Team</a></li>
                 <li><a class="navlist" href="#">References</a></li>
             </ul>
         </div>
         <div class="navbar-logo">
-            <img id="nav-logo" src="src/logo.png" alt=brand-logo" onclick="window.location='index.html'">
+            <img id="nav-logo" src="src/logo.png" alt=brand-logo" onclick="window.location='#page-1'">
         </div>
         <button class="login-button" onclick="Login()"><i class="fa-solid fa-right-to-bracket fa-xl"></i></button>
     </nav>
 
     <!-- Page 1 -->
 
-    <div class="page-1">
+    <div class="page-1" id="page-1">
 
         <div class="heroTitle" data-aos="fade-down" data-aos-duration="1000">
             MODERN LIVING <br> FOR EVERYONE
@@ -69,14 +74,15 @@
         </div>
 
         <div class="searchBox">
-                <select id="drop-menu">
-                    <option value="Option 1">Select</option>
-                    <option value="Option 2">Student</option>
-                    <option value="Option 3">Other</option>
-                </select>
+            <select id="drop-menu">
+                <option value="Option 1">Select</option>
+                <option value="Option 2">Student</option>
+                <option value="Option 3">Other</option>
+            </select>
             <div class="offersSearch">
                 <input type="text" class="search-bar" placeholder="Search location"></input>
-                <button class="search-btn" onclick="searchProperty()"><i class="search-icon fa-solid fa-magnifying-glass"></i></button>
+                <button class="search-btn" onclick="searchProperty()"><i
+                        class="search-icon fa-solid fa-magnifying-glass"></i></button>
             </div>
         </div>
 
@@ -84,7 +90,42 @@
 
     <!-- Page 2 -->
 
-    <div class="page-2">
+    <div class="page-2" id="top-offers">
+        <h1 class="offer-title">Top Offers</h1>
+        <p class="offerCaption">Fulfill your career dreams, enjoy all the achievements <br>
+            of the city center and luxury housing to the fullest.</p>
+        <hr class="offer-hr">
+        <button class="offer-btn" onclick="showOffers()">Show All offers</button>
+        <div class="offerCards">
+                <section class="card" data-aos="fade-up">
+                    <img class="card-image" src="src/house-listing.png">
+                    <div class="card-name">Large 4-room apartment with a beautiful terrace</div>
+                    <div class="card-place">Barcelona IX.</div>
+                    <div class="card-price">Rs. 1.99 Lakh</div>
+                </section>
+                <section class="card" data-aos="fade-up">
+                    <img class="card-image" src="src/house-listing.png">
+                    <div class="card-name">Large 4-room apartment with a beautiful terrace</div>
+                    <div class="card-place">Barcelona IX.</div>
+                    <div class="card-price">Rs. 1.99 Lakh</div>
+                </section>
+                <section class="card" data-aos="fade-up">
+                    <img class="card-image" src="src/house-listing.png">
+                    <div class="card-name">Large 4-room apartment with a beautiful terrace</div>
+                    <div class="card-place">Barcelona IX.</div>
+                    <div class="card-price">Rs. 1.99 Lakh</div>
+                </section>
+                <section class="card" data-aos="fade-up">
+                    <img class="card-image" src="src/house-listing.png">
+                    <div class="card-name">Large 4-room apartment with a beautiful terrace</div>
+                    <div class="card-place">Barcelona IX.</div>
+                    <div class="card-price">Rs. 1.99 Lakh</div>
+                </section>
+        </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="page-3">
 
     </div>
 
@@ -96,11 +137,16 @@
 
     <!-- Button click js -->
     <script type="text/javascript">
-        function searchProperty(){
+        function searchProperty() {
             alert("Searching Property....")
         }
-        function Login(){
+
+        function Login() {
             window.location.href = "/login.html";
+        }
+
+        function showOffers() {
+            window.location.href = "/offers.html";
         }
     </script>
 </body>

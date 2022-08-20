@@ -3,7 +3,6 @@
     --bg: #FFC947;
     --white: #F0F0F0
 }
-
 html,
 body {
     overflow-x: hidden;
@@ -11,6 +10,7 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -24,16 +24,17 @@ body {
 
 .navigation {
     display: flex;
-    position: absolute;
+    position: fixed;
     z-index: 10;
     height: 5rem;
     width: 95%;
-    top: 2vh;
+    top: 1vh;
     left: 0;
     right: 0;
     margin: 0 auto;
     border-radius: 1rem;
-    background-color: #F0F0F0;
+    background-color: #f0f0f0c9;
+    backdrop-filter: blur(10px);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -78,7 +79,7 @@ ul {
 
 #menuToggle span {
     display: flex;
-    width: 3rem;
+    width: 3.1rem;
     height: 0.3rem;
     margin-bottom: 0.6rem;
     position: relative;
@@ -167,7 +168,7 @@ ul {
 /* Page 1 */
 
 .page-1 {
-    margin-top: 16vh;
+    padding-top: 15vh;
 }
 
 .heroTitle {
@@ -188,7 +189,7 @@ ul {
     text-align: center;
     font-weight: 800;
     color: #3D598E;
-    margin-bottom: 1.5rem;
+    margin-bottom: 4rem;
 }
 
 #heroHouse {
@@ -196,16 +197,14 @@ ul {
 }
 
 .heroImage {
-    position: absolute;
-    right: 0;
-    z-index: 1;
+    float: right;
 }
 
 .heroAnimation {
     margin-top: 2rem;
     position: relative;
     left: -2rem;
-    z-index: 0;
+    z-index: -1;
 }
 
 .line {
@@ -225,7 +224,7 @@ ul {
     height: 5rem;
     border-radius: 2rem;
     bottom: 1rem;
-    margin: 2rem auto;
+    margin: 5rem auto 0;
 }
 
 #drop-menu {
@@ -244,9 +243,9 @@ ul {
 
 .offersSearch {
     display: inline;
-    position: absolute;
-    right: 0;
-    margin:1.2rem 1.6rem 0 0;
+    position: relative;
+    float: right;
+    margin: 1.2rem 1.5rem 0 0;
 }
 
 ::placeholder {
@@ -277,4 +276,122 @@ ul {
 
 .search-icon {
     filter: drop-shadow(0 4px 5px #85888C);
+}
+
+/* Page 2 */
+
+.page-2 {
+    background-color: var(--accent);
+    color: #FFC947;
+    text-align: center;
+}
+
+.offer-title {
+    padding-top: 6rem;
+    font-size: 10vw;
+    font-weight: 600;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+}
+
+.offerCaption {
+    font-weight: 500;
+    font-size: 3.5vw;
+    color: var(--white)
+}
+
+.offer-hr {
+    float: left;
+    background-color: var(--bg);
+    height: 0.3rem;
+    border: none;
+    width: 70vw;
+    margin-top: 1rem;
+}
+
+.offer-btn {
+    float: right;
+    margin-right: 1rem;
+    border: none;
+    height: 2.5rem;
+    font-size: 1rem;
+    width: 25vw;
+    color: var(--accent);
+    background-color: var(--bg);
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+/* Offer Card */
+.offerCards {
+    margin-top: 7rem;
+    padding-bottom: 1rem;
+}
+
+.card {
+    height: 35vh;
+    width: 95vw;
+    background-color: var(--white);
+    margin: 2rem auto;
+    border-radius: 2rem;
+}
+
+.card-image {
+    height: 20vh;
+    width: 95vw;
+    margin: auto;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.card-name {
+    width: 70vw;
+    text-align: left;
+    margin-left: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.card-place {
+    text-align: left;
+    font-weight: 400;
+    margin:1.5rem 0 1.5rem 1.5rem;
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.card-price {
+    position: relative;
+    text-align: right;
+    bottom: 3rem;
+    right: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+/* Media Query for tablets */
+
+@media screen and (min-width: 700px) {
+    .card {
+        display: inline-block;
+        height: 45vh;
+        width: 45vw;
+        margin: 2rem 1rem;
+    }
+
+    .card-image {
+        height: 25vh;
+        width: 45vw;
+    }
+
+    .card-name {
+        width: 35vw;
+        text-align: left;
+        margin-left: 1.5rem;
+        font-weight: 700;
+        color: var(--accent);
+        font-size: 1.2rem;
+    }
+
 }
