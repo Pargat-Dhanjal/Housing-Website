@@ -3,6 +3,7 @@
     --bg: #FFC947;
     --white: #F0F0F0
 }
+
 html,
 body {
     overflow-x: hidden;
@@ -355,7 +356,7 @@ ul {
 .card-place {
     text-align: left;
     font-weight: 400;
-    margin:1.5rem 0 1.5rem 1.5rem;
+    margin: 1.5rem 0 1.5rem 1.5rem;
     color: var(--accent);
     font-size: 1.2rem;
 }
@@ -394,4 +395,89 @@ ul {
         font-size: 1.2rem;
     }
 
+}
+
+/* Page 3 */
+
+.page-3 {
+    text-align: center;
+    color: var(--accent);
+}
+
+.heading {
+    padding-top: 5rem;
+    font-weight: 900;
+    font-size: 10vw;
+}
+
+.caption {
+    font-weight: 400;
+    font-size: 3.5vw;
+    padding:0 2rem;
+}
+
+.about-img {
+    margin-top: 2rem;
+    width: 105vw;
+}
+
+/* Page-4 */
+
+.page-4 {
+    background-color: var(--accent);
+    color: var(--bg);
+    text-align: center;
+}
+
+.teamCards {
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.mem-card {
+    height: 80vw;
+    width: 80vw;
+    background-color: var(--white);
+    margin: 2rem auto;
+    border-radius: 2rem;
+}
+
+/* Page 5 */
+
+.page-5 {
+    color: var(--accent);
+    text-align: center;
+}
+
+
+.ref-card {
+    width: 90vw;
+    background-color: var(--white);
+    margin: 2rem auto;
+    border-radius: 2rem;
+    color: #091638;
+}
+
+.ref-opinion {
+    font-size: 4vw;
+    padding: 7vw;
+}
+
+.ref-name {
+    font-size: 4.5vw;
+    padding: 1vw;
+}
+
+.ref-house {
+    font-size: 3vw;
+    padding-bottom: 2vw;
+}
+
+/* Footer */
+
+.footer{
+    text-align: center;
+    background-color: var(--accent);
+    color: var(--bg);
+    padding: 1.5rem;
 }
