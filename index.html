@@ -1,246 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/zub3tbp.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>Real Estate Website</title>
+    <!-- Custom CSS Style sheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Animation on scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="src/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
 </head>
+
 <body>
-
-    <div class="hero">
-        
-    <nav>
-
-        <div class="navbarLogo">
-            <img class="logo" src="logo.png" alt="" onclick="window.location='index.html'">
+    <!-- Navbar -->
+    <nav class="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <li><a class="navlist" href="#top-offers">Top Offers</a></li>
+                <li><a class="navlist" href="#about-us">About Us</a></li>
+                <li><a class="navlist" href="#team">Our Team</a></li>
+                <li><a class="navlist" href="#references">References</a></li>
+            </ul>
         </div>
-
-        <ul class="navbarList">
-
-            <li id="topOffers__link">Top Offers</li>
-            <li onclick="window.location='offers.html'">Search in Offers</li>
-            <li onclick="window.location='#aboutUs'">About Us</li>
-            <li onclick="window.location='#references'">References</li>
-
-        </ul>
-
-        <div class="navLogin" onclick="window.location='login.html'"> Login </div>
-
+        <div class="navbar-logo">
+            <img id="nav-logo" src="src/logo.png" alt=brand-logo" onclick="window.location='#page-1'">
+        </div>
+        <button class="login-button" onclick="Login()"><i class="fa-solid fa-right-to-bracket fa-xl"></i></button>
     </nav>
 
-        <div class="heroImage">
-         <img data-aos="zoom-in" id="heroHouse" src="heroHouse.png" alt="">
-        </div>
+    <!-- Page 1 -->
+
+    <div class="page-1" id="page-1">
 
         <div class="heroTitle" data-aos="fade-down" data-aos-duration="1000">
             MODERN LIVING <br> FOR EVERYONE
         </div>
 
         <div class="heroCaption" data-aos="fade-down" data-aos-duration="1000">
-            We provide a complete service for the sale and rental of real estate. 
+            We provide a complete service for <br> the sale and rental of real estate.
+        </div>
+
+        <div class="heroImage">
+            <img data-aos="fade-left" id="heroHouse" src="src/heroHouse.png" alt="house">
         </div>
 
         <div class="heroAnimation">
-            <div class="line1">BUY SELL BUY SELL BUY SELL BUY</div>
-            <div class="line2">SELL BUY SELL BUY SELL BUY SELL</div>
-            <div class="line3">BUY SELL BUY SELL BUY SELL BUY</div>
+            <div class="line" data-aos="slide-right" data-aos-duration="3000">BUY SELL BUY SELL BUY SELL BUY</div>
+            <div class="line" data-aos="slide-left" data-aos-duration="3000">SELL BUY SELL BUY SELL BUY SELL</div>
+            <div class="line" data-aos="slide-right" data-aos-duration="3000">BUY SELL BUY SELL BUY SELL BUY</div>
+            <div class="line" data-aos="slide-left" data-aos-duration="3000">BUY SELL BUY SELL BUY SELL BUY</div>
+            <div class="line" data-aos="slide-right" data-aos-duration="3000">BUY SELL BUY SELL BUY SELL BUY</div>
         </div>
 
-        <div class="searchBar">
-            <div class="dropdown" onclick="myFunction()">
-                    <i class="fa fa-caret-down"></i>
-                    Dropdown
-
-
-                  <div class="dropdown-content" id="myDropdown">
-                    <a href="#">Student</a>
-                    <a href="#">Other</a>
-                  </div>
-                
-            </div>
+        <div class="searchBox">
+            <select id="drop-menu">
+                <option value="Option 1">Select</option>
+                <option value="Option 2">Student</option>
+                <option value="Option 3">Other</option>
+            </select>
             <div class="offersSearch">
-                <input type="text" class="search"></input>
-                <div class="searchButton">Search</div>
+                <input type="text" class="search-bar" placeholder="Search location"></input>
+                <button class="search-btn" onclick="searchProperty()"><i
+                        class="search-icon fa-solid fa-magnifying-glass"></i></button>
             </div>
-
         </div>
+
     </div>
 
-    <div class="topOffers" id="topOffers">
+    <!-- Page 2 -->
 
-        <div class="offerTitle">
-
-            <div data-aos="fade-up" class="offerHeader">
-                Top Offers
-            </div>
-
-            <div class="offerCaption">
-                Fulfill your career dreams, enjoy all the achievements of <br>
-                the city center and luxury housing to the fullest.
-            </div>
-
-        </div>
-
-        <div class="offerRule"> <hr> </div>
-
+    <div class="page-2" id="top-offers">
+        <h1 class="offer-title">Top Offers</h1>
+        <p class="offerCaption">Fulfill your career dreams, enjoy all the achievements <br>
+            of the city center and luxury housing to the fullest.</p>
+        <hr class="offer-hr">
+        <button class="offer-btn" onclick="showOffers()">Show All offers</button>
         <div class="offerCards">
-            <div class="hell">
-                <section class="panel">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                </section>
-                <section class="panel">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                </section>
-                <section class="panel">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                </section >
-            </div>
-        </div>
-
-        <div class="offerAll">
-            Show All <br> Offers
-        </div>
-
-    </div>
-
-    <div class="aboutUs" id="aboutUs">
-        <div class="aboutImage">
-            <img  data-aos="zoom-in" height="60%" src="aboutUs.png"  alt="">
-        </div>
-        <div class="aboutUsText">
-            <div data-aos="zoom-in" class="aboutUsTitle">
-                About Us
-            </div>
-            <div data-aos="fade-up" class="aboutUsCaption">
-                We are a company that connects the world of real estate and finance. We provide a complete service for the sale, purchase or rental of real estate. Our advantage is more than 15 years of experience and soil in attractive locations in Slovakia with branches in Bratislava and Košice.
-            </div>
-            <div data-aos="fade-up" data-aos-anchor=".aboutUsCaption" class="aboutUsCaption">
-                We are a company that connects the world of real estate and finance. We provide a complete service for the sale, purchase or rental of real estate. 
-            </div>
+            <section class="card" data-aos="fade-up">
+                <img class="card-image" src="src/house-listing.png">
+                <div class="card-name">Large 4-room apartment with a beautiful terrace</div>
+                <div class="card-place">Barcelona IX.</div>
+                <div class="card-price">Rs. 1.99 Lakh</div>
+            </section>
+            <section class="card" data-aos="fade-up">
+                <img class="card-image" src="src/house-listing.png">
+                <div class="card-name">Large 4-room apartment with a beautiful terrace</div>
+                <div class="card-place">Barcelona IX.</div>
+                <div class="card-price">Rs. 1.99 Lakh</div>
+            </section>
+            <section class="card" data-aos="fade-up">
+                <img class="card-image" src="src/house-listing.png">
+                <div class="card-name">Large 4-room apartment with a beautiful terrace</div>
+                <div class="card-place">Barcelona IX.</div>
+                <div class="card-price">Rs. 1.99 Lakh</div>
+            </section>
+            <section class="card" data-aos="fade-up">
+                <img class="card-image" src="src/house-listing.png">
+                <div class="card-name">Large 4-room apartment with a beautiful terrace</div>
+                <div class="card-place">Barcelona IX.</div>
+                <div class="card-price">Rs. 1.99 Lakh</div>
+            </section>
         </div>
     </div>
 
-    <div class="Team">
-        <div data-aos="flip-left" data-aos-duration="1000" class="TeamTitle">
-            Our Team
-        </div>
-
-        <div class="TeamCards">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div data-aos="flip-left" data-aos-duration="1000" class="swiper-slide">Slide 1</div>
-                  <div data-aos="flip-left" data-aos-duration="1000" class="swiper-slide">Slide 2</div>
-                  <div data-aos="flip-left" data-aos-duration="1000" class="swiper-slide">Slide 3</div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-        </div>
-
-        
-       
+    <!-- Page 3 -->
+    <div class="page-3" id="about-us">
+        <h1 class="heading" data-aos="zoom-in">About Us</h1>
+        <p class="caption" data-aos="fade-up">We are a company that connects the world of real estate and finance.
+            We provide a complete service for
+            the sale, purchase or rental of real estate. Our advantage is more than 15 years of experience and soil
+            in attractive locations in Slovakia with branches in Bratislava and Košice.</p>
+        <p class="caption" data-aos="fade-up" data-aos-anchor=".about-caption">We are a company that connects the
+            world of real estate and finance. We provide a complete service for
+            the sale, purchase or rental of real estate.</p>
+        <img src="src/aboutUs.png" alt="about-us" class="about-img" data-aos="zoom-in">
     </div>
 
-    <div class="references" id="references">
-        <div data-aos="fade-up" class="referencesTitle">
-            References
-        </div>
-
-        <div data-aos="fade-up" class="referencesCaption">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rutrum donec ultricies cras id ac.
-        </div>
-
-        <div class="referencesCards">
-            <div data-aos="flip-up" class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">Slide 1</div>
-                  <div class="swiper-slide">Slide 2</div>
-                  <div class="swiper-slide">Slide 3</div>
-                  <div class="swiper-slide">Slide 4</div>
-                  <div class="swiper-slide">Slide 5</div>
-                  <div class="swiper-slide">Slide 6</div>
-                  <div class="swiper-slide">Slide 7</div>
-                  <div class="swiper-slide">Slide 8</div>
-                  <div class="swiper-slide">Slide 9</div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
+    <!-- Page 4 -->
+    <div class="page-4" id="team">
+        <h1 class="heading">Our Team</h1>
+        <div class="teamCards">
+            <section class="mem-card" data-aos="flip-left">
+            </section>
+            <section class="mem-card" data-aos="flip-left">
+            </section>
+            <section class="mem-card" data-aos="flip-left">
+            </section>
         </div>
     </div>
 
-    <div class="footer">
-        
+    <!-- Page 5 -->
 
+    <div class="page-5" id="references">
+        <h1 class="heading">References</h1>
+        <p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus rutrum donec ultricies cras id ac.</p>
+        <div class="RefCards">
+            <section class="ref-card"  data-aos="flip-up">
+                <div class="ref-opinion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique in
+                    pellentesque ultrices et massa neque, convallis lorem. Erat proin in posuere dui accumsan lorem.
+                    Diam nunc scelerisque mi vestibulum scelerisque mi ac nisi. Dictumst nunc placerat ultricies
+                    pretium.</div>
+                <div class="ref-name">Emerson Aminoff</div>
+                <div class="ref-house">3 bedroom apartment in Madrid</div>
+            </section>
+            <section class="ref-card" data-aos="flip-up">
+                <div class="ref-opinion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique in
+                    pellentesque ultrices et massa neque, convallis lorem. Erat proin in posuere dui accumsan lorem.
+                    Diam nunc scelerisque mi vestibulum scelerisque mi ac nisi. Dictumst nunc placerat ultricies
+                    pretium.</div>
+                <div class="ref-name">Emerson Aminoff</div>
+                <div class="ref-house">3 bedroom apartment in Madrid</div>
+            </section>
+            <section class="ref-card" data-aos="flip-up">
+                <div class="ref-opinion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique in
+                    pellentesque ultrices et massa neque, convallis lorem. Erat proin in posuere dui accumsan lorem.
+                    Diam nunc scelerisque mi vestibulum scelerisque mi ac nisi. Dictumst nunc placerat ultricies
+                    pretium.</div>
+                <div class="ref-name">Emerson Aminoff</div>
+                <div class="ref-house">3 bedroom apartment in Madrid</div>
+            </section>
+        </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Flip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Observer.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Draggable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/EaselPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/MotionPathPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/PixiPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CustomEase.min.js"></script>
+
+    <!-- Footer -->
+
+    <div class="footer">© 2022 Batman, DC.</div>
+
+    <!-- AOS script -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script> AOS.init(); </script> <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
     <script>
- 
-        function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
-        }
-        
-        window.onclick = function(e) {
-          if (!e.target.matches('.dropdown')) {
-          var myDropdown = document.getElementById("myDropdown");
-            if (myDropdown.classList.contains('show')) {
-              myDropdown.classList.remove('show');
-            }
-          }
-        }
+        AOS.init();
     </script>
 
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-          slidesPerView: 3,
-          spaceBetween: 30,
-          slidesPerGroup: 3,
-          loop: true,
-          loopFillGroupWithBlank: true,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
-    </script>
-    <script>
-        $("#topOffers__link").click(function() {
-            $('html, body').animate({
-                scrollTop: $("#topOffers").offset().top
-            }, 2000);
-        });
+    <!-- Button click js -->
+    <script type="text/javascript">
+        function searchProperty() {
+            alert("Searching Property....")
+        }
+
+        function Login() {
+            window.location.href = "/login.html";
+        }
+
+        function showOffers() {
+            window.location.href = "/offers.html";
+        }
     </script>
 </body>
+
 </html>

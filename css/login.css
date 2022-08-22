@@ -1,0 +1,171 @@
+:root {
+    --accent: #113A8A;
+    --bg: #FFC947;
+}
+
+html,body{
+    height: 90vh;
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-y: hidden;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+}
+
+.login-bg{
+    z-index: -1;
+}
+
+.waves{
+    z-index: 0;
+    position: absolute;
+    background-color: var(--accent);
+    width: 100%;
+    height: 10vh;
+    top: 0;
+}
+
+.waves-svg{
+    position: absolute;
+    z-index: 1;
+    top: 9.5vh;
+    transform: rotate(180deg);
+}
+
+/* Login Card */
+
+.login-card {
+    z-index: 10;
+    position: relative;
+    background-color: white;
+    margin:10vw auto;
+    width: 85vw;
+    border-radius: 3rem;
+    text-align: center;
+}
+
+.form__redirect {
+    padding-top: 1rem;
+    font-size: 3.5vw;
+}
+
+.form__redirect__link {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.form__header{
+    font-size: 8vw;
+    font-weight: 600;
+}
+
+.highlight{
+    color: var(--bg);
+}
+
+.form__tagline{
+    font-size: 3.5vw;
+    font-weight: 400;
+    padding: 0 8%;
+}
+
+/* Form input */
+
+.form__group{
+    padding: 1rem 0;
+}
+
+.form__name{
+    position: absolute;
+    text-align: left;
+    margin-left: 2.5vw ;
+    margin-top:1.5vw;
+    color: var(--accent);
+    font-weight: 400;
+    font-size: 4.5vw;
+    transition: margin-top 200ms ease-in,
+    left 200ms ease-in,
+    font-size 200ms ease-in;
+}
+
+.form__input{
+    width: 75%;
+    font-size: 5vw;
+    padding: 2vw;
+    border-radius: 1rem;
+}
+
+.form__input:focus ~ .form__name {
+    margin-top: -0.65rem;
+    left: 1.1rem;
+    font-size: 1rem;
+}
+
+.email{
+    border: 1px solid var(--bg);
+}
+
+.password{
+    border: 1px solid var(--accent);
+}
+
+/* Login button */
+
+.login-btn{
+    background-color: var(--accent);
+    color: white;
+    height: 5vh;
+    width: 60vw;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem auto;
+}
+
+/* Login with text */
+
+.option {
+    width: 70%; 
+    text-align: center; 
+    border-bottom: 1px solid grey; 
+    line-height: 0em;
+    margin: auto;
+ } 
+ 
+.option-text { 
+     background:#fff; 
+     color: gray;
+     padding:0 1rem; 
+     font-weight: 400;
+ }
+
+ /* Google Button */
+
+ .google{
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    height: 5vh;
+    width: 70%;
+    border: 1px solid black;
+    border-radius: 2rem;
+    margin: 1rem auto;
+ }
+
+ .google > img{
+    width: 1rem;
+    margin: auto;
+ }
+
+.home{
+    padding-bottom: 0.5rem;
+}

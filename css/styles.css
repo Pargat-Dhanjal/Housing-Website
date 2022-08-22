@@ -1,0 +1,483 @@
+:root {
+    --accent: #113A8A;
+    --bg: #FFC947;
+    --white: #F0F0F0
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Navbar */
+
+.navigation {
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    height: 5rem;
+    width: 95%;
+    top: 1vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 1rem;
+    background-color: #f0f0f0c9;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navlist {
+    text-decoration: none;
+    color: var(--accent);
+    opacity: 1;
+    font-size: 1.5em;
+    font-weight: 400;
+    transition: 200ms;
+}
+
+.navlist:hover {
+    opacity: 0.5;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+#menuToggle {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle input {
+    display: flex;
+    width: 2.7rem;
+    height: 2rem;
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#menuToggle span {
+    display: flex;
+    width: 3.1rem;
+    height: 0.3rem;
+    margin-bottom: 0.6rem;
+    position: relative;
+    background: var(--accent);
+    z-index: 1;
+    transform-origin: 5px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+    filter: drop-shadow(0 5px 4px #85888C);
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-3px, -1px);
+    background: var(--accent);
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+    position: absolute;
+    width: 50vw;
+    height: 80vh;
+    text-align: left;
+    box-shadow: 0 0 20px #85888C;
+    margin: -3rem 0 1rem -3rem;
+    padding: 3rem;
+    padding-top: 10rem;
+    background-color: var(--white);
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    transition-delay: 1s;
+}
+
+#menuToggle input:checked~ul {
+    transform: none;
+}
+
+.login-button {
+    position: absolute;
+    right: 0;
+    margin-top: 0.7rem;
+    margin-right: 1rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    border: none;
+    background-color: var(--accent);
+    color: var(--bg);
+    border-radius: 4rem;
+    filter: drop-shadow(0 4px 5px #85888C);
+    cursor: pointer;
+}
+
+.navbar-logo {
+    margin: 0.8rem auto 0;
+}
+
+#nav-logo {
+    height: 3.5rem;
+    cursor: pointer;
+    filter: drop-shadow(0 4px 5px #85888C);
+}
+
+/* Page 1 */
+
+.page-1 {
+    padding-top: 15vh;
+}
+
+.heroTitle {
+    text-align: center;
+    top: 15vh;
+    left: 0;
+    right: 0;
+    font-weight: 800;
+    font-size: 10vw;
+    letter-spacing: 3px;
+    color: #113A8A;
+}
+
+.heroCaption {
+    font-size: 4vw;
+    margin-top: 1rem;
+    line-height: 7vw;
+    text-align: center;
+    font-weight: 800;
+    color: #3D598E;
+    margin-bottom: 4rem;
+}
+
+#heroHouse {
+    width: 60vw;
+}
+
+.heroImage {
+    float: right;
+}
+
+.heroAnimation {
+    margin-top: 2rem;
+    position: relative;
+    left: -2rem;
+    z-index: -1;
+}
+
+.line {
+    font-size: 10vw;
+    font-weight: 700;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+    color: #185ADB;
+    white-space: nowrap;
+}
+
+/* Search bar */
+
+.searchBox {
+    background-color: var(--accent);
+    width: 95vw;
+    height: 5rem;
+    border-radius: 2rem;
+    bottom: 1rem;
+    margin: 5rem auto 0;
+}
+
+#drop-menu {
+    display: inline;
+    width: 25vw;
+    margin: 1.2rem 0 0 1.3rem;
+    border: none;
+    height: 2.5rem;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 0.8rem;
+    color: var(--accent);
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.offersSearch {
+    display: inline;
+    position: relative;
+    float: right;
+    margin: 1.2rem 1.5rem 0 0;
+}
+
+::placeholder {
+    color: var(--accent);
+}
+
+.search-bar {
+    border: none;
+    height: 2.5rem;
+    width: 40vw;
+    border-radius: 1rem 0 0 1rem;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--accent);
+    background-color: var(--white);
+}
+
+.search-btn {
+    border: none;
+    height: 2.5rem;
+    width: 10vw;
+    border-radius: 0 1rem 1rem 0;
+    font-size: 1rem;
+    color: var(--accent);
+    background-color: var(--bg);
+    cursor: pointer;
+}
+
+.search-icon {
+    filter: drop-shadow(0 4px 5px #85888C);
+}
+
+/* Page 2 */
+
+.page-2 {
+    background-color: var(--accent);
+    color: #FFC947;
+    text-align: center;
+}
+
+.offer-title {
+    padding-top: 6rem;
+    font-size: 10vw;
+    font-weight: 600;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+}
+
+.offerCaption {
+    font-weight: 500;
+    font-size: 3.5vw;
+    color: var(--white)
+}
+
+.offer-hr {
+    float: left;
+    background-color: var(--bg);
+    height: 0.3rem;
+    border: none;
+    width: 70vw;
+    margin-top: 1rem;
+}
+
+.offer-btn {
+    float: right;
+    margin-right: 1rem;
+    border: none;
+    height: 2.5rem;
+    font-size: 1rem;
+    width: 25vw;
+    color: var(--accent);
+    background-color: var(--bg);
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+/* Offer Card */
+.offerCards {
+    margin-top: 7rem;
+    padding-bottom: 1rem;
+}
+
+.card {
+    height: 35vh;
+    width: 95vw;
+    background-color: var(--white);
+    margin: 2rem auto;
+    border-radius: 2rem;
+}
+
+.card-image {
+    height: 20vh;
+    width: 95vw;
+    margin: auto;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.card-name {
+    width: 70vw;
+    text-align: left;
+    margin-left: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.card-place {
+    text-align: left;
+    font-weight: 400;
+    margin: 1.5rem 0 1.5rem 1.5rem;
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.card-price {
+    position: relative;
+    text-align: right;
+    bottom: 3rem;
+    right: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+/* Media Query for tablets */
+
+@media screen and (min-width: 700px) {
+    .card {
+        display: inline-block;
+        height: 45vh;
+        width: 45vw;
+        margin: 2rem 1rem;
+    }
+
+    .card-image {
+        height: 25vh;
+        width: 45vw;
+    }
+
+    .card-name {
+        width: 35vw;
+        text-align: left;
+        margin-left: 1.5rem;
+        font-weight: 700;
+        color: var(--accent);
+        font-size: 1.2rem;
+    }
+
+}
+
+/* Page 3 */
+
+.page-3 {
+    text-align: center;
+    color: var(--accent);
+}
+
+.heading {
+    padding-top: 5rem;
+    font-weight: 900;
+    font-size: 10vw;
+}
+
+.caption {
+    font-weight: 400;
+    font-size: 3.5vw;
+    padding:0 2rem;
+}
+
+.about-img {
+    margin-top: 2rem;
+    width: 105vw;
+}
+
+/* Page-4 */
+
+.page-4 {
+    background-color: var(--accent);
+    color: var(--bg);
+    text-align: center;
+}
+
+.teamCards {
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.mem-card {
+    height: 80vw;
+    width: 80vw;
+    background-color: var(--white);
+    margin: 2rem auto;
+    border-radius: 2rem;
+}
+
+/* Page 5 */
+
+.page-5 {
+    color: var(--accent);
+    text-align: center;
+}
+
+
+.ref-card {
+    width: 90vw;
+    background-color: var(--white);
+    margin: 2rem auto;
+    border-radius: 2rem;
+    color: #091638;
+}
+
+.ref-opinion {
+    font-size: 4vw;
+    padding: 7vw;
+}
+
+.ref-name {
+    font-size: 4.5vw;
+    padding: 1vw;
+}
+
+.ref-house {
+    font-size: 3vw;
+    padding-bottom: 2vw;
+}
+
+/* Footer */
+
+.footer{
+    text-align: center;
+    background-color: var(--accent);
+    color: var(--bg);
+    padding: 1.5rem;
+}
