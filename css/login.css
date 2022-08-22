@@ -7,7 +7,6 @@ html,body{
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
-    overflow-y: hidden;
     margin: 0;
     padding: 0;
 }
@@ -45,7 +44,6 @@ body {
     position: relative;
     background-color: white;
     margin:10vw auto;
-    height: 85vh;
     width: 85vw;
     border-radius: 3rem;
     text-align: center;
@@ -166,3 +164,7 @@ body {
     width: 1rem;
     margin: auto;
  }
+
+.home{
+    padding-bottom: 0.5rem;
+}
