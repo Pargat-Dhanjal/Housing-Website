@@ -4,7 +4,7 @@
 }
 
 html,body{
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     overflow-x: hidden;
     margin: 0;
@@ -12,6 +12,7 @@ html,body{
 }
 
 body {
+    overflow-y: hidden;
     position: relative;
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
